@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://MApeados/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="SIFEIService" targetNamespace="http://MApeados/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="https://devcfdi.sifei.com.mx:8443/SIFEI33/SIFEI?xsd=1" namespace="http://MApeados/" />
+    </xsd:schema>
+  </types>
+  <message name="CambiaPassword">
+    <part name="parameters" element="tns:CambiaPassword" />
+  </message>
+  <message name="CambiaPasswordResponse">
+    <part name="parameters" element="tns:CambiaPasswordResponse" />
+  </message>
+  <message name="SifeiException">
+    <part name="fault" element="tns:SifeiException" />
+  </message>
+  <message name="getCFDIAndURL">
+    <part name="parameters" element="tns:getCFDIAndURL" />
+  </message>
+  <message name="getCFDIAndURLResponse">
+    <part name="parameters" element="tns:getCFDIAndURLResponse" />
+  </message>
+  <message name="SOAPException">
+    <part name="fault" element="tns:SOAPException" />
+  </message>
+  <message name="getCFDI">
+    <part name="parameters" element="tns:getCFDI" />
+  </message>
+  <message name="getCFDIResponse">
+    <part name="parameters" element="tns:getCFDIResponse" />
+  </message>
+  <message name="IOException">
+    <part name="fault" element="tns:IOException" />
+  </message>
+  <message name="getCFDISendPDF">
+    <part name="parameters" element="tns:getCFDISendPDF" />
+  </message>
+  <message name="getCFDISendPDFResponse">
+    <part name="parameters" element="tns:getCFDISendPDFResponse" />
+  </message>
+  <message name="getCFDIProcesa">
+    <part name="parameters" element="tns:getCFDIProcesa" />
+  </message>
+  <message name="getCFDIProcesaResponse">
+    <part name="parameters" element="tns:getCFDIProcesaResponse" />
+  </message>
+  <message name="getCFDISign">
+    <part name="parameters" element="tns:getCFDISign" />
+  </message>
+  <message name="getCFDISignResponse">
+    <part name="parameters" element="tns:getCFDISignResponse" />
+  </message>
+  <message name="setCFDI">
+    <part name="parameters" element="tns:setCFDI" />
+  </message>
+  <message name="setCFDIResponse">
+    <part name="parameters" element="tns:setCFDIResponse" />
+  </message>
+  <message name="getTimbreCFDI">
+    <part name="parameters" element="tns:getTimbreCFDI" />
+  </message>
+  <message name="getTimbreCFDIResponse">
+    <part name="parameters" element="tns:getTimbreCFDIResponse" />
+  </message>
+  <message name="getXML">
+    <part name="parameters" element="tns:getXML" />
+  </message>
+  <message name="getXMLResponse">
+    <part name="parameters" element="tns:getXMLResponse" />
+  </message>
+  <message name="cancelaCFDI">
+    <part name="parameters" element="tns:cancelaCFDI" />
+  </message>
+  <message name="cancelaCFDIResponse">
+    <part name="parameters" element="tns:cancelaCFDIResponse" />
+  </message>
+  <message name="cancelaCFDISectorPrimario">
+    <part name="parameters" element="tns:cancelaCFDISectorPrimario" />
+  </message>
+  <message name="cancelaCFDISectorPrimarioResponse">
+    <part name="parameters" element="tns:cancelaCFDISectorPrimarioResponse" />
+  </message>
+  <message name="cancelaCFDISignature">
+    <part name="parameters" element="tns:cancelaCFDISignature" />
+  </message>
+  <message name="cancelaCFDISignatureResponse">
+    <part name="parameters" element="tns:cancelaCFDISignatureResponse" />
+  </message>
+  <message name="getXMLProceso">
+    <part name="parameters" element="tns:getXMLProceso" />
+  </message>
+  <message name="getXMLProcesoResponse">
+    <part name="parameters" element="tns:getXMLProcesoResponse" />
+  </message>
+  <portType name="SIFEI">
+    <operation name="CambiaPassword">
+      <input wsam:Action="http://MApeados/SIFEI/CambiaPasswordRequest" message="tns:CambiaPassword" />
+      <output wsam:Action="http://MApeados/SIFEI/CambiaPasswordResponse" message="tns:CambiaPasswordResponse" />
+      <fault wsam:Action="http://MApeados/SIFEI/CambiaPassword/Fault/SifeiException" name="SifeiException" message="tns:SifeiException" />
+    </operation>
+    <operation name="getCFDIAndURL">
+      <input wsam:Action="http://MApeados/SIFEI/getCFDIAndURLRequest" message="tns:getCFDIAndURL" />
+      <output wsam:Action="http://MApeados/SIFEI/getCFDIAndURLResponse" message="tns:getCFDIAndURLResponse" />
+      <fault wsam:Action="http://MApeados/SIFEI/getCFDIAndURL/Fault/SifeiException" name="SifeiException" message="tns:SifeiException" />
+      <fault wsam:Action="http://MApeados/SIFEI/getCFDIAndURL/Fault/SOAPException" name="SOAPException" message="tns:SOAPException" />
+    </operation>
+    <operation name="getCFDI">
+      <input wsam:Action="http://MApeados/SIFEI/getCFDIRequest" message="tns:getCFDI" />
+      <output wsam:Action="http://MApeados/SIFEI/getCFDIResponse" message="tns:getCFDIResponse" />
+      <fault wsam:Action="http://MApeados/SIFEI/getCFDI/Fault/SifeiException" name="SifeiException" message="tns:SifeiException" />
+      <fault wsam:Action="http://MApeados/SIFEI/getCFDI/Fault/SOAPException" name="SOAPException" message="tns:SOAPException" />
+      <fault wsam:Action="http://MApeados/SIFEI/getCFDI/Fault/IOException" name="IOException" message="tns:IOException" />
+    </operation>
+    <operation name="getCFDISendPDF">
+      <input wsam:Action="http://MApeados/SIFEI/getCFDISendPDFRequest" message="tns:getCFDISendPDF" />
+      <output wsam:Action="http://MApeados/SIFEI/getCFDISendPDFResponse" message="tns:getCFDISendPDFResponse" />
+      <fault wsam:Action="http://MApeados/SIFEI/getCFDISendPDF/Fault/SifeiException" name="SifeiException" message="tns:SifeiException" />
+    </operation>
+    <operation name="getCFDIProcesa">
+      <input wsam:Action="http://MApeados/SIFEI/getCFDIProcesaRequest" message="tns:getCFDIProcesa" />
+      <output wsam:Action="http://MApeados/SIFEI/getCFDIProcesaResponse" message="tns:getCFDIProcesaResponse" />
+      <fault wsam:Action="http://MApeados/SIFEI/getCFDIProcesa/Fault/SifeiException" name="SifeiException" message="tns:SifeiException" />
+    </operation>
+    <operation name="getCFDISign">
+      <input wsam:Action="http://MApeados/SIFEI/getCFDISignRequest" message="tns:getCFDISign" />
+      <output wsam:Action="http://MApeados/SIFEI/getCFDISignResponse" message="tns:getCFDISignResponse" />
+      <fault wsam:Action="http://MApeados/SIFEI/getCFDISign/Fault/SifeiException" name="SifeiException" message="tns:SifeiException" />
+    </operation>
+    <operation name="setCFDI">
+      <input wsam:Action="http://MApeados/SIFEI/setCFDIRequest" message="tns:setCFDI" />
+      <output wsam:Action="http://MApeados/SIFEI/setCFDIResponse" message="tns:setCFDIResponse" />
+      <fault wsam:Action="http://MApeados/SIFEI/setCFDI/Fault/SifeiException" name="SifeiException" message="tns:SifeiException" />
+    </operation>
+    <operation name="getTimbreCFDI">
+      <input wsam:Action="http://MApeados/SIFEI/getTimbreCFDIRequest" message="tns:getTimbreCFDI" />
+      <output wsam:Action="http://MApeados/SIFEI/getTimbreCFDIResponse" message="tns:getTimbreCFDIResponse" />
+      <fault wsam:Action="http://MApeados/SIFEI/getTimbreCFDI/Fault/SifeiException" name="SifeiException" message="tns:SifeiException" />
+    </operation>
+    <operation name="getXML">
+      <input wsam:Action="http://MApeados/SIFEI/getXMLRequest" message="tns:getXML" />
+      <output wsam:Action="http://MApeados/SIFEI/getXMLResponse" message="tns:getXMLResponse" />
+      <fault wsam:Action="http://MApeados/SIFEI/getXML/Fault/SifeiException" name="SifeiException" message="tns:SifeiException" />
+    </operation>
+    <operation name="cancelaCFDI">
+      <input wsam:Action="http://MApeados/SIFEI/cancelaCFDIRequest" message="tns:cancelaCFDI" />
+      <output wsam:Action="http://MApeados/SIFEI/cancelaCFDIResponse" message="tns:cancelaCFDIResponse" />
+      <fault wsam:Action="http://MApeados/SIFEI/cancelaCFDI/Fault/SifeiException" name="SifeiException" message="tns:SifeiException" />
+    </operation>
+    <operation name="cancelaCFDISectorPrimario">
+      <input wsam:Action="http://MApeados/SIFEI/cancelaCFDISectorPrimarioRequest" message="tns:cancelaCFDISectorPrimario" />
+      <output wsam:Action="http://MApeados/SIFEI/cancelaCFDISectorPrimarioResponse" message="tns:cancelaCFDISectorPrimarioResponse" />
+      <fault wsam:Action="http://MApeados/SIFEI/cancelaCFDISectorPrimario/Fault/SifeiException" name="SifeiException" message="tns:SifeiException" />
+    </operation>
+    <operation name="cancelaCFDISignature">
+      <input wsam:Action="http://MApeados/SIFEI/cancelaCFDISignatureRequest" message="tns:cancelaCFDISignature" />
+      <output wsam:Action="http://MApeados/SIFEI/cancelaCFDISignatureResponse" message="tns:cancelaCFDISignatureResponse" />
+      <fault wsam:Action="http://MApeados/SIFEI/cancelaCFDISignature/Fault/SifeiException" name="SifeiException" message="tns:SifeiException" />
+    </operation>
+    <operation name="getXMLProceso">
+      <input wsam:Action="http://MApeados/SIFEI/getXMLProcesoRequest" message="tns:getXMLProceso" />
+      <output wsam:Action="http://MApeados/SIFEI/getXMLProcesoResponse" message="tns:getXMLProcesoResponse" />
+      <fault wsam:Action="http://MApeados/SIFEI/getXMLProceso/Fault/SifeiException" name="SifeiException" message="tns:SifeiException" />
+    </operation>
+  </portType>
+  <binding name="SIFEIPortBinding" type="tns:SIFEI">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="CambiaPassword">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SifeiException">
+        <soap:fault use="literal" name="SifeiException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getCFDIAndURL">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SifeiException">
+        <soap:fault use="literal" name="SifeiException" namespace="" />
+      </fault>
+      <fault name="SOAPException">
+        <soap:fault use="literal" name="SOAPException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getCFDI">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SifeiException">
+        <soap:fault use="literal" name="SifeiException" namespace="" />
+      </fault>
+      <fault name="SOAPException">
+        <soap:fault use="literal" name="SOAPException" namespace="" />
+      </fault>
+      <fault name="IOException">
+        <soap:fault use="literal" name="IOException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getCFDISendPDF">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SifeiException">
+        <soap:fault use="literal" name="SifeiException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getCFDIProcesa">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SifeiException">
+        <soap:fault use="literal" name="SifeiException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getCFDISign">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SifeiException">
+        <soap:fault use="literal" name="SifeiException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="setCFDI">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SifeiException">
+        <soap:fault use="literal" name="SifeiException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getTimbreCFDI">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SifeiException">
+        <soap:fault use="literal" name="SifeiException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getXML">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SifeiException">
+        <soap:fault use="literal" name="SifeiException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="cancelaCFDI">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SifeiException">
+        <soap:fault use="literal" name="SifeiException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="cancelaCFDISectorPrimario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SifeiException">
+        <soap:fault use="literal" name="SifeiException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="cancelaCFDISignature">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SifeiException">
+        <soap:fault use="literal" name="SifeiException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="getXMLProceso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SifeiException">
+        <soap:fault use="literal" name="SifeiException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="SIFEIService">
+    <port name="SIFEIPort" binding="tns:SIFEIPortBinding">
+      <soap:address location="https://devcfdi.sifei.com.mx:8443/SIFEI33/SIFEI" />
+    </port>
+  </service>
+</definitions>

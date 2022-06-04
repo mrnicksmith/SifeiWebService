@@ -1,0 +1,9 @@
+C:\Users\Administrator\source\repos\SifeiWebService\SifeiWebService\bin\Debug\SifeiWebService.exe.config
+C:\Users\Administrator\source\repos\SifeiWebService\SifeiWebService\bin\Debug\SifeiWebService.exe
+C:\Users\Administrator\source\repos\SifeiWebService\SifeiWebService\bin\Debug\SifeiWebService.pdb
+C:\Users\Administrator\source\repos\SifeiWebService\SifeiWebService\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Administrator\source\repos\SifeiWebService\SifeiWebService\obj\Debug\SifeiWebService.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\SifeiWebService\SifeiWebService\obj\Debug\SifeiWebService.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\SifeiWebService\SifeiWebService\obj\Debug\SifeiWebService.csproj.CopyComplete
+C:\Users\Administrator\source\repos\SifeiWebService\SifeiWebService\obj\Debug\SifeiWebService.exe
+C:\Users\Administrator\source\repos\SifeiWebService\SifeiWebService\obj\Debug\SifeiWebService.pdb

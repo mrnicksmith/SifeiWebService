@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://MApeados/" targetNamespace="http://MApeados/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CambiaPassword" type="tns:CambiaPassword" />
+  <xs:element name="CambiaPasswordResponse" type="tns:CambiaPasswordResponse" />
+  <xs:element name="IOException" type="tns:IOException" />
+  <xs:element name="SOAPException" type="tns:SOAPException" />
+  <xs:element name="SifeiException" type="tns:SifeiException" />
+  <xs:element name="cancelaCFDI" type="tns:cancelaCFDI" />
+  <xs:element name="cancelaCFDIResponse" type="tns:cancelaCFDIResponse" />
+  <xs:element name="cancelaCFDISectorPrimario" type="tns:cancelaCFDISectorPrimario" />
+  <xs:element name="cancelaCFDISectorPrimarioResponse" type="tns:cancelaCFDISectorPrimarioResponse" />
+  <xs:element name="cancelaCFDISignature" type="tns:cancelaCFDISignature" />
+  <xs:element name="cancelaCFDISignatureResponse" type="tns:cancelaCFDISignatureResponse" />
+  <xs:element name="getCFDI" type="tns:getCFDI" />
+  <xs:element name="getCFDIAndURL" type="tns:getCFDIAndURL" />
+  <xs:element name="getCFDIAndURLResponse" type="tns:getCFDIAndURLResponse" />
+  <xs:element name="getCFDIProcesa" type="tns:getCFDIProcesa" />
+  <xs:element name="getCFDIProcesaResponse" type="tns:getCFDIProcesaResponse" />
+  <xs:element name="getCFDIResponse" type="tns:getCFDIResponse" />
+  <xs:element name="getCFDISendPDF" type="tns:getCFDISendPDF" />
+  <xs:element name="getCFDISendPDFResponse" type="tns:getCFDISendPDFResponse" />
+  <xs:element name="getCFDISign" type="tns:getCFDISign" />
+  <xs:element name="getCFDISignResponse" type="tns:getCFDISignResponse" />
+  <xs:element name="getTimbreCFDI" type="tns:getTimbreCFDI" />
+  <xs:element name="getTimbreCFDIResponse" type="tns:getTimbreCFDIResponse" />
+  <xs:element name="getXML" type="tns:getXML" />
+  <xs:element name="getXMLProceso" type="tns:getXMLProceso" />
+  <xs:element name="getXMLProcesoResponse" type="tns:getXMLProcesoResponse" />
+  <xs:element name="getXMLResponse" type="tns:getXMLResponse" />
+  <xs:element name="setCFDI" type="tns:setCFDI" />
+  <xs:element name="setCFDIResponse" type="tns:setCFDIResponse" />
+  <xs:complexType name="getTimbreCFDI">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" type="xs:string" />
+      <xs:element minOccurs="0" name="archivoXMLZip" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Serie" type="xs:string" />
+      <xs:element minOccurs="0" name="IdEquipo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getTimbreCFDIResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SifeiException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="error" type="xs:string" />
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+      <xs:element minOccurs="0" name="xml" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getXMLProceso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rfc" type="xs:string" />
+      <xs:element minOccurs="0" name="pass" type="xs:string" />
+      <xs:element name="idseguimiento" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getXMLProcesoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getXML">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="rfc" type="xs:string" />
+      <xs:element minOccurs="0" name="pass" type="xs:string" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getXMLResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCFDIAndURL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" type="xs:string" />
+      <xs:element minOccurs="0" name="archivoXMLZip" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Serie" type="xs:string" />
+      <xs:element minOccurs="0" name="IdEquipo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCFDIAndURLResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SOAPException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setCFDI">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" type="xs:string" />
+      <xs:element minOccurs="0" name="archivoXMLZip" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Serie" type="xs:string" />
+      <xs:element minOccurs="0" name="IdEquipo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setCFDIResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCFDI">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" type="xs:string" />
+      <xs:element minOccurs="0" name="archivoXMLZip" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Serie" type="xs:string" />
+      <xs:element minOccurs="0" name="IdEquipo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCFDIResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IOException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCFDISign">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" type="xs:string" />
+      <xs:element minOccurs="0" name="archivoXMLZip" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Serie" type="xs:string" />
+      <xs:element minOccurs="0" name="IdEquipo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCFDISignResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelaCFDISignature">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuarioSIFEI" type="xs:string" />
+      <xs:element minOccurs="0" name="passUser" type="xs:string" />
+      <xs:element minOccurs="0" name="archivoZIP" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelaCFDISignatureResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCFDIProcesa">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" type="xs:string" />
+      <xs:element minOccurs="0" name="archivoXMLZip" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Serie" type="xs:string" />
+      <xs:element minOccurs="0" name="IdEquipo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCFDIProcesaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelaCFDISectorPrimario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuarioSIFEI" type="xs:string" />
+      <xs:element minOccurs="0" name="passUser" type="xs:string" />
+      <xs:element minOccurs="0" name="rfc" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UUIDS" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelaCFDISectorPrimarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CambiaPassword">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" type="xs:string" />
+      <xs:element minOccurs="0" name="NewPassword" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CambiaPasswordResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCFDISendPDF">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" type="xs:string" />
+      <xs:element minOccurs="0" name="archivoXMLZip" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Serie" type="xs:string" />
+      <xs:element minOccurs="0" name="IdEquipo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCFDISendPDFResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelaCFDI">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuarioSIFEI" type="xs:string" />
+      <xs:element minOccurs="0" name="passUser" type="xs:string" />
+      <xs:element minOccurs="0" name="rfc" type="xs:string" />
+      <xs:element minOccurs="0" name="pfx" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="passPFX" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UUIDS" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelaCFDIResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
